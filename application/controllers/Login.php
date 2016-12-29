@@ -19,9 +19,12 @@ class Login extends CI_Controller {
 		$this->load->model('login_model');
 		if ($this->login_model->login_valid($username, $password))
 		{
-      //echo "user valid and logged in";
+      echo "password matched";
 		}
-		  //echo "user not valid";
+		else
+		{
+			echo "password not matched";
+		}
 
 		}
 		else
