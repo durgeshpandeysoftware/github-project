@@ -22,7 +22,8 @@ class Login extends CI_Controller {
 		{
       $this->load->library('session');
 			$this->session->set_userdata('id', $logged_in);
-			$this->load->view('admin_login');
+		//	$this->load->view('admin_login');
+    return redirect('admin/dashboard');
 		}
 		else
 		{
