@@ -1,14 +1,22 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 class Login extends CI_Controller {
-
 	public function index()
 	{
 		$this->load->view('login');
 	}
 	public function admin_login()
 	{
-	 echo "welcome to the dashboard";	
+	$this->load->library('form_validation');
+	 $this->form_validation->set_rules('username', 'Username', 'required');
+	  $this->form_validation->set_rules('password', 'Password', 'required');
+		if ($this->form_validation->run())
+		{
+		$this->load->view("admin_login");
+		}
+		else
+		{
+		$this->load->view("login");
+		}
 	}
 }
