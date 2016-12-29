@@ -6,14 +6,9 @@
 
 			<fieldset>
 					<div class="row">
-						<div class="col-sm-4"></div>
-					</div><br>
-			<?php echo 'hello' ?>
-				<div class="row">
-				<div class="col-sm-7"></div>
-					<div class="col-sm-3">
-					<div>
-					<?php echo form_submit(array('name'=>'submit','value'=>'login','class'=>'btn btn-success')); ?>
-					</div></div></div>
+						<div class="col-sm-4">Welcome to The login portal</div>
+					</div>
+
+
 			</fieldset>
 </div>

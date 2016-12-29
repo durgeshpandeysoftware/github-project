@@ -36,5 +36,4 @@
 					<?php echo form_submit(array('name'=>'submit','value'=>'login','class'=>'btn btn-success')); ?>
 					</div></div></div>
 			</fieldset>
-
 </div>

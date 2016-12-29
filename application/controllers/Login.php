@@ -17,15 +17,17 @@ class Login extends CI_Controller {
     $password = $this->input->post('password');
 		//echo "username: $username and password: $password";
 		$this->load->model('login_model');
-		if ($this->login_model->login_valid($username, $password))
+		$logged_in = $this->login_model->login_valid($username, $password);
+		if ($logged_in)
 		{
-      echo "password matched";
+      $this->load->library('session');
+			$this->session->set_userdata('id', $logged_in);
+			$this->load->view('admin_login');
 		}
 		else
 		{
 			echo "password not matched";
 		}
-
 		}
 		else
 		{
