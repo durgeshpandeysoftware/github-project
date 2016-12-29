@@ -15,7 +15,14 @@ class Login extends CI_Controller {
 	//	$this->load->view("admin_login");
 		$username = $this->input->post('username');
     $password = $this->input->post('password');
-		echo "username: $username and password: $password";
+		//echo "username: $username and password: $password";
+		$this->load->model('login_model');
+		if ($this->login_model->login_valid($username, $password))
+		{
+      //echo "user valid and logged in";
+		}
+		  //echo "user not valid";
+
 		}
 		else
 		{
